@@ -1,0 +1,9 @@
+build_task:
+  freebsd_instance:
+    image_family: freebsd-13-1
+  additional_containers:
+    - name: postgres
+      image: postgres:14
+      port: 5432
+      POSTGRES_PASSWORD: ""
+  build_script: echo "hello world"
